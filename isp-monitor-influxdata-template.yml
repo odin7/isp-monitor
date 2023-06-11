@@ -287,7 +287,7 @@ spec:
         # # Query given DNS server and gives statistics
         [[inputs.dns_query]]
          ## servers to query
-          servers = ["8.8.8.8", "1.1.1.1"]
+          servers = ["8.8.8.8", "1.1.1.1", "$ISP_DNS", , "$LOCAL_DNS_1", "$LOCAL_DNS_2"]
 
         #   ## Network is the network protocol name.
         #   # network = "udp"
@@ -437,7 +437,7 @@ spec:
         # # Ping given url(s) and return statistics
         [[inputs.ping]]
           ## List of urls to ping
-          urls = ["google.com", "8.8.8.8"]
+          urls = ["google.com", "8.8.8.8", , "$MODEM_IP", "$ROUTER_IP"]
 
           ## Number of pings to send per collection (ping -c <COUNT>)
           count = 1
